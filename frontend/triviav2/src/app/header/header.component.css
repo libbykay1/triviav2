@@ -1,0 +1,34 @@
+nav {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    background-color: rgb(219, 204, 121);
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    display: flex;
+    max-width: 75%;
+    padding: 20px;
+}
+
+img {
+    height: 50px;
+    padding-right: 10px;
+}
+
+a {
+    display: flex;
+    background-color: black;
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,13 @@
+
+    <app-header showLoginButton="true"></app-header>
+    <main>
+      <p>
+        Welcome to Long pub name Trivia! Create a new team, or log in to access a saved team:
+      </p>
+      <form [formGroup]="teamNameForm" (ngSubmit)="handleSubmit($event)">
+        <label for="team-name">
+          <input type="text" formControlName="teamName" id="team-name" placeholder="Team Name" />
+        </label>
+        <button type="submit" [disabled]="!teamNameForm.valid">Create Team</button>
+      </form>
+    </main>

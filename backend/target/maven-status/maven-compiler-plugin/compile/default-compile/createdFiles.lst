@@ -6,11 +6,12 @@ com/libbi/trivia/Seeder.class
 com/libbi/trivia/user/User.class
 com/libbi/trivia/config/JwtService.class
 com/libbi/trivia/submission/SubmissionRepository.class
+com/libbi/trivia/WebConfig.class
 com/libbi/trivia/team/TeamMapperImpl.class
+com/libbi/trivia/WebConfig$1.class
 com/libbi/trivia/game/GameServiceImpl.class
 com/libbi/trivia/question/QuestionRepository.class
 com/libbi/trivia/user/Role.class
-com/libbi/trivia/question/PictureQuestion.class
 com/libbi/trivia/auth/AuthenticationResponse$AuthenticationResponseBuilder.class
 com/libbi/trivia/auth/RegisterRequest.class
 com/libbi/trivia/team/Team.class
@@ -19,10 +20,8 @@ com/libbi/trivia/user/UserMapperImpl.class
 com/libbi/trivia/answer/Answer.class
 com/libbi/trivia/user/UserRepository.class
 com/libbi/trivia/game/GameService.class
-com/libbi/trivia/answer/multiplePossibleAnswer.class
 com/libbi/trivia/auth/AuthenticationService.class
 com/libbi/trivia/question/Question.class
-com/libbi/trivia/answer/SingleAnswer.class
 com/libbi/trivia/team/TeamResponseDto.class
 com/libbi/trivia/round/RoundRepository.class
 com/libbi/trivia/user/UserMapper.class
