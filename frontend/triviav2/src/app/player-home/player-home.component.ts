@@ -38,7 +38,7 @@ export class PlayerHomeComponent {
     this.teamService.createTeam(teamRequestDto, gameId).pipe(
       catchError(error => {
         console.error('Error creating team:', error);
-        return of(null); // Handle the error and return a fallback value
+        return of(null); 
       })
     ).subscribe(response => {
       if (response) {

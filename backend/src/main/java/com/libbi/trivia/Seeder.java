@@ -46,16 +46,20 @@ public class Seeder implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception{
 		
-		Game exampleGame = new Game();
-		exampleGame.setDate(LocalDateTime.of(2024, 2, 27, 0, 0, 0));
-		exampleGame.setLocation("The Green Dragon");
+		Game exampleGame1 = new Game();
+		exampleGame1.setDate(LocalDateTime.of(2024, 2, 27, 0, 0, 0));
+		exampleGame1.setLocation("The Green Dragon");
 		
-		gameRepository.saveAll(Arrays.asList(new Game[] { exampleGame }));
+		Game exampleGame2 = new Game();
+		exampleGame2.setDate(LocalDateTime.of(2024, 3, 5, 0, 0, 0));
+		exampleGame2.setLocation("The Green Dragon");
+		
+		gameRepository.saveAll(Arrays.asList(new Game[] { exampleGame1, exampleGame2 }));
 		
 		Team exampleTeam = new Team();
 		exampleTeam.setTeamName("The Fellowship of the Ring");
 		exampleTeam.setDeleted(false);
-		exampleTeam.setGame(exampleGame);
+		exampleTeam.setGame(exampleGame1);
 		exampleTeam.setPoints(0.0);
 		teamRepository.saveAll(Arrays.asList(new Team[] { exampleTeam }));
 		
@@ -82,7 +86,7 @@ public class Seeder implements CommandLineRunner {
 		exampleRound.setCategory("Find the connection");
 		exampleRound.setType("single answer");
 		exampleRound.setPublished(true);
-		exampleRound.setGame(exampleGame);
+		exampleRound.setGame(exampleGame1);
 		List<String> tags = new ArrayList<>();
 		tags.add("connection");
 		exampleRound.setTags(tags);

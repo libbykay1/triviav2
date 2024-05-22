@@ -25,6 +25,28 @@ public class TeamServiceImpl implements TeamService {
 	
 	}
 
+	@Override
+	public TeamResponseDto joinGame(Long teamId, Long gameId) {
+		Team team = getTeambyId(teamId);
+		Game game = gameService.getGameById(gameId);
+		team.setGame(game);
+		
+		return teamMapper.entityToResponseDto(teamRepository.saveAndFlush(team));
+	}
+
+	private Team getTeambyId(Long teamId) {
+		return teamRepository.findByIdAndDeletedFalse(teamId);
+	}
+
+	@Override
+	public TeamResponseDto changeTeamName(TeamRequestDto teamRequestDto, Long teamId) {
+		Team team = getTeambyId(teamId);
+		team.setTeamName(teamRequestDto.getTeamName());
+		
+		return teamMapper.entityToResponseDto(teamRepository.saveAndFlush(team));
+
+	}
+
 	
 
 }

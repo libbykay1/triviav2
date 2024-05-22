@@ -1,5 +1,6 @@
 package com.libbi.trivia.team;
 
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +18,16 @@ private final TeamService teamService;
 	@PostMapping("{gameId}/new")
 	public TeamResponseDto createTeam(@RequestBody TeamRequestDto teamRequestDto, @PathVariable Long gameId) {
 		return teamService.createTeam(teamRequestDto, gameId);
+	}
+	
+	@PatchMapping("{teamId}/{gameId}/join")
+	public TeamResponseDto joinGame(@PathVariable Long teamId, @PathVariable Long gameId) {
+		return teamService.joinGame(teamId, gameId);
+	}
+	
+	@PatchMapping("{teamId}/changename")
+	public TeamResponseDto changeTeamName(@RequestBody TeamRequestDto teamRequestDto, @PathVariable Long teamId) {
+		return teamService.changeTeamName(teamRequestDto, teamId);
 	}
 
 }
