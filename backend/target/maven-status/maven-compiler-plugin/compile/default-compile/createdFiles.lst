@@ -1,11 +1,14 @@
+com/libbi/trivia/token/TokenRepository.class
 com/libbi/trivia/auth/AuthenticationResponse.class
 com/libbi/trivia/round/Round.class
+com/libbi/trivia/config/LogoutService.class
 com/libbi/trivia/team/TeamService.class
 com/libbi/trivia/submission/Submission.class
 com/libbi/trivia/Seeder.class
 com/libbi/trivia/user/User.class
 com/libbi/trivia/config/JwtService.class
 com/libbi/trivia/submission/SubmissionRepository.class
+com/libbi/trivia/token/Token.class
 com/libbi/trivia/WebConfig.class
 com/libbi/trivia/team/TeamMapperImpl.class
 com/libbi/trivia/WebConfig$1.class
@@ -17,6 +20,7 @@ com/libbi/trivia/auth/RegisterRequest.class
 com/libbi/trivia/team/Team.class
 com/libbi/trivia/team/TeamServiceImpl.class
 com/libbi/trivia/user/UserMapperImpl.class
+com/libbi/trivia/token/TokenType.class
 com/libbi/trivia/answer/Answer.class
 com/libbi/trivia/user/UserRepository.class
 com/libbi/trivia/game/GameService.class
@@ -40,3 +44,4 @@ com/libbi/trivia/team/TeamMapper.class
 com/libbi/trivia/config/SecurityConfiguration.class
 com/libbi/trivia/team/TeamRepository.class
 com/libbi/trivia/config/JwtAuthenticationFilter.class
+com/libbi/trivia/token/Token$TokenBuilder.class

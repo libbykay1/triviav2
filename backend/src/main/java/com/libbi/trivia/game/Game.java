@@ -10,7 +10,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 
-//import com.example.triviaSpring.entities.Round;
 import com.libbi.trivia.team.Team;
 
 import lombok.Data;
