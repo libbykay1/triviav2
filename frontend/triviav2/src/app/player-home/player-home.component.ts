@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TeamService } from '../team.service';
 import { TeamRequestDto } from '../models/TeamRequestDto';
@@ -18,7 +18,7 @@ import { of } from 'rxjs';
 })
 export class PlayerHomeComponent {
 
-  constructor(private teamService: TeamService) {
+  constructor(private teamService: TeamService, private router: Router) {
 
   }
 
@@ -38,11 +38,11 @@ export class PlayerHomeComponent {
     this.teamService.createTeam(teamRequestDto, gameId).pipe(
       catchError(error => {
         console.error('Error creating team:', error);
-        return of(null); 
+        return of(null);
       })
     ).subscribe(response => {
       if (response) {
-        console.log('Team created:', response);
+        this.router.navigate(['play/wait']);
       }
     });
   }

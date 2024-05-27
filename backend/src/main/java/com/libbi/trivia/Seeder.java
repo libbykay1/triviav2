@@ -18,6 +18,7 @@ import com.libbi.trivia.user.User;
 import com.libbi.trivia.user.UserRepository;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import static com.libbi.trivia.user.Role.PLAYER;
@@ -42,6 +43,7 @@ public class Seeder implements CommandLineRunner {
 	private final SubmissionRepository submissionRepository;
 	private final GameRepository gameRepository;
 	private final UserRepository userRepository;
+	private final PasswordEncoder passwordEncoder;
 	
 	@Override
 	public void run(String... args) throws Exception{
@@ -65,16 +67,16 @@ public class Seeder implements CommandLineRunner {
 		
 		User exampleUser = new User();
 		exampleUser.setEmail("frodo@shire.com");
-		exampleUser.setPassword("ringbearer");
+		exampleUser.setPassword(passwordEncoder.encode("ringbearer"));
 		exampleUser.setTeam(exampleTeam);
 		exampleUser.setRole(PLAYER);
 		exampleUser.setDeleted(false);
 		
 		User exampleQuizmaster = new User();
-		exampleUser.setEmail("gandalf@wizard.com");
-		exampleUser.setPassword("pipeweed");
-		exampleUser.setRole(QUIZMASTER);
-		exampleUser.setDeleted(false);
+		exampleQuizmaster.setEmail("gandalf@wizard.com");
+		exampleQuizmaster.setPassword(passwordEncoder.encode("pipeweed"));
+		exampleQuizmaster.setRole(QUIZMASTER);
+		exampleQuizmaster.setDeleted(false);
 		userRepository.saveAll(Arrays.asList(new User[] { exampleUser, exampleQuizmaster }));
 		
 		Round exampleRound = new Round();

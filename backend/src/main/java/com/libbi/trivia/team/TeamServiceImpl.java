@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 
 import com.libbi.trivia.game.Game;
 import com.libbi.trivia.game.GameService;
+import com.libbi.trivia.user.User;
+import com.libbi.trivia.user.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -14,6 +16,7 @@ public class TeamServiceImpl implements TeamService {
 	private final TeamMapper teamMapper;
 	private final TeamRepository teamRepository;
 	private final GameService gameService;
+	private final UserRepository userRepository;
 	
 	@Override
 	public TeamResponseDto createTeam(TeamRequestDto teamRequestDto, Long gameId) {
@@ -46,6 +49,15 @@ public class TeamServiceImpl implements TeamService {
 		return teamMapper.entityToResponseDto(teamRepository.saveAndFlush(team));
 
 	}
+
+	@Override
+	public TeamResponseDto getUserTeam(Integer userId) {
+		User user = userRepository.getUserByIdAndDeletedFalse(userId);
+		Team team = user.getTeam();
+		return teamMapper.entityToResponseDto(team);
+	}
+
+
 
 	
 

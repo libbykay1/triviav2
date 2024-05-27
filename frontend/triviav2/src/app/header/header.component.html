@@ -1,11 +1,16 @@
 <nav>
     <div class="title">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF0Os5-_iPnJQgfPHEjv38FWF4mErngpb6OIXTcTsIMQ&s" alt="">
-        <h1>Long pub nameTrivia</h1>
+        <h1>Long pub name Trivia</h1>
     </div>
     <div>
         @if (showLoginButton == "true") {
-        <a href="">Log In</a>
+        <a routerLink="/account/login">Log In</a>
+        }
+    </div>
+    <div>
+        @if (showLogoutButton == "true") {
+        <a routerLink="/play">Log Out</a>
         }
     </div>
 </nav>

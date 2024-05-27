@@ -1,0 +1,17 @@
+
+<app-header showLoginButton="false" showLogoutButton="false"></app-header>
+<main>
+
+  <form [formGroup]="loginForm" (ngSubmit)="handleSubmit($event)">
+    <label for="email">
+      <input type="text" formControlName="email" id="email" placeholder="Email" />
+    </label>
+    <label for="password">
+        <input type="text" formControlName="password" id="password" placeholder="Password" />
+      </label>
+    <button type="submit" [disabled]="!loginForm.valid">Log In</button>
+  </form>
+  <div>
+    No account? <a routerLink="/account/create">Create one</a>
+  </div>
+</main>

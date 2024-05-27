@@ -1,0 +1,15 @@
+
+<app-header showLoginButton="false"></app-header>
+<main>
+
+  <form [formGroup]="newAccountForm" (ngSubmit)="handleSubmit($event)">
+    <label for="email">
+      <input type="text" formControlName="email" id="email" placeholder="Email" />
+    </label>
+    <label for="password">
+        <input type="text" formControlName="password" id="password" placeholder="Password" />
+      </label>
+    <button type="submit" [disabled]="!newAccountForm.valid">Create Account</button>
+  </form>
+  
+</main>
