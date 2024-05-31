@@ -9,5 +9,9 @@ public interface TeamService {
 	TeamResponseDto changeTeamName(TeamRequestDto teamRequestDto, Long teamid);
 
 	TeamResponseDto getUserTeam(Integer userId);
+	
+	Team getTeamById(Long teamId);
+
+	TeamResponseDto createTeamLoggedIn(TeamRequestDto teamRequestDto);
 
 }

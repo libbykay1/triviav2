@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 
 import com.libbi.trivia.game.Game;
@@ -37,8 +38,9 @@ public class Team {
 	
 	private String teamName;
 	
-	@OneToMany(mappedBy = "team")
-	private List<User> members;
+	@OneToOne
+	@JoinColumn(name = "user_id")
+	private User owner;
 	
 	@OneToMany(mappedBy = "team")
 	private List<Submission> submissions;

@@ -72,12 +72,16 @@ public class Seeder implements CommandLineRunner {
 		exampleUser.setRole(PLAYER);
 		exampleUser.setDeleted(false);
 		
+		
 		User exampleQuizmaster = new User();
 		exampleQuizmaster.setEmail("gandalf@wizard.com");
 		exampleQuizmaster.setPassword(passwordEncoder.encode("pipeweed"));
 		exampleQuizmaster.setRole(QUIZMASTER);
 		exampleQuizmaster.setDeleted(false);
 		userRepository.saveAll(Arrays.asList(new User[] { exampleUser, exampleQuizmaster }));
+		
+		exampleTeam.setOwner(exampleUser);
+		teamRepository.save(exampleTeam);
 		
 		Round exampleRound = new Round();
 		exampleRound.setTitle("Find the connection");

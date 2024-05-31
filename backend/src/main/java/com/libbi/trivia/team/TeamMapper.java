@@ -12,4 +12,6 @@ public interface TeamMapper {
 
 	TeamResponseDto entityToResponseDto(Team entity);
 
+	Team responseDtoToEntity(TeamResponseDto teamResponseDto);
+
 }

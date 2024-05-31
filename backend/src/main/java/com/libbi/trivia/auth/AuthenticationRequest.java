@@ -1,5 +1,7 @@
 package com.libbi.trivia.auth;
 
+import com.libbi.trivia.team.Team;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

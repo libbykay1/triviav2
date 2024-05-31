@@ -37,7 +37,7 @@ public class User implements UserDetails {
     private String password;
     @Enumerated(EnumType.STRING)
     private Role role;
-    @ManyToOne
+    @OneToOne
 	@JoinColumn(name = "team_id")
     private Team team;
     private boolean deleted;

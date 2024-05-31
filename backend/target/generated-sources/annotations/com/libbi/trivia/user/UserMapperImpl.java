@@ -1,13 +1,44 @@
 package com.libbi.trivia.user;
 
+import com.libbi.trivia.team.Team;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-05-27T13:04:01-0700",
+    date = "2024-05-31T00:39:17-0700",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 17.0.9 (Amazon.com Inc.)"
 )
 @Component
 public class UserMapperImpl implements UserMapper {
+
+    @Override
+    public UserResponseDto userToUserResponseDto(User user) {
+        if ( user == null ) {
+            return null;
+        }
+
+        UserResponseDto userResponseDto = new UserResponseDto();
+
+        userResponseDto.setTeamId( userTeamId( user ) );
+        userResponseDto.setId( user.getId() );
+        userResponseDto.setEmail( user.getEmail() );
+
+        return userResponseDto;
+    }
+
+    private Long userTeamId(User user) {
+        if ( user == null ) {
+            return null;
+        }
+        Team team = user.getTeam();
+        if ( team == null ) {
+            return null;
+        }
+        Long id = team.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
+    }
 }
