@@ -1,5 +1,7 @@
 package com.libbi.trivia.team;
 
+import java.util.List;
+
 public interface TeamService {
 	
 	TeamResponseDto createTeam(TeamRequestDto teamRequestDto, Long gameId);
@@ -13,5 +15,7 @@ public interface TeamService {
 	Team getTeamById(Long teamId);
 
 	TeamResponseDto createTeamLoggedIn(TeamRequestDto teamRequestDto);
+
+	List<TeamResponseDto> getAllGameTeams(Long gameId);
 
 }

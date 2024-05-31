@@ -1,5 +1,8 @@
 package com.libbi.trivia.team;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.libbi.trivia.game.Game;
@@ -74,6 +77,17 @@ public class TeamServiceImpl implements TeamService {
 		User user = userRepository.getUserByIdAndDeletedFalse(userId);
 		Team team = user.getTeam();
 		return teamMapper.entityToResponseDto(team);
+	}
+
+	@Override
+	public List<TeamResponseDto> getAllGameTeams(Long gameId) {
+		Game game = gameService.getGameById(gameId);
+		List<TeamResponseDto> response = new ArrayList<>();
+		for (Team team : game.getTeams()) {
+			TeamResponseDto dto = teamMapper.entityToResponseDto(team);
+			response.add(dto);
+		}
+		return response;
 	}
 
 

@@ -1,5 +1,7 @@
 package com.libbi.trivia.team;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,6 +36,11 @@ public class TeamController {
 	@GetMapping("{userId}/team")
 	public TeamResponseDto getUserTeam(@PathVariable Integer userId) {
 		return teamService.getUserTeam(userId);
+	}
+	
+	@GetMapping("{gameId}/teams")
+	public List<TeamResponseDto> getAllGameTeams(@PathVariable Long gameId) {
+		return teamService.getAllGameTeams(gameId);
 	}
 
 }
