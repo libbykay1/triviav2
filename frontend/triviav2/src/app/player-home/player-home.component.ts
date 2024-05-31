@@ -42,6 +42,7 @@ export class PlayerHomeComponent {
       })
     ).subscribe(response => {
       if (response) {
+        this.teamService.setTeamName(newTeamName);
         this.router.navigate(['play/wait']);
       }
     });
