@@ -9,6 +9,9 @@
     <label for="password">
         <input type="password" formControlName="password" id="password" placeholder="Password" />
       </label>
+      <label for="teamName">
+        <input type="text" formControlName="teamName" id="teamName" placeholder="Team Name (Optional)" />
+      </label>
     <button type="submit" [disabled]="!newAccountForm.valid">Create Account</button>
   </form>
 

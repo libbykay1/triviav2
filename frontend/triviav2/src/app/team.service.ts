@@ -19,6 +19,8 @@ export class TeamService {
     return this.http.post<TeamResponseDto>(`${baseUrl}/${gameId}/new`, payload);
   }
 
+  
+
   setTeamName(name: string) {
     this.teamNameSource.next(name);
   }

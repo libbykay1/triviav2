@@ -3,6 +3,7 @@ package com.libbi.trivia.auth;
 import com.libbi.trivia.config.JwtService;
 import com.libbi.trivia.team.Team;
 import com.libbi.trivia.team.TeamMapper;
+import com.libbi.trivia.team.TeamRequestDto;
 import com.libbi.trivia.team.TeamResponseDto;
 import com.libbi.trivia.team.TeamService;
 import com.libbi.trivia.user.Role;
@@ -39,8 +40,9 @@ public class AuthenticationService {
                 new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         Team team = null;
-        if (request.getTeamRequestDto() != null) {
-            TeamResponseDto teamResponseDto = teamService.createTeamLoggedIn(request.getTeamRequestDto()); 
+        if (request.getTeamName() != null) {
+        	TeamRequestDto teamRequestDto = new TeamRequestDto(request.getTeamName());
+            TeamResponseDto teamResponseDto = teamService.createTeamLoggedIn(teamRequestDto); 
             team = teamMapper.responseDtoToEntity(teamResponseDto); 
         }
         if (team != null) {

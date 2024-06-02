@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { LoginDto } from '../models/LoginDto';
 import { catchError } from 'rxjs';
 import { of } from 'rxjs';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { AccountDto } from '../models/AccountDto';
 
 @Component({
   selector: 'app-create-account',
@@ -23,6 +23,7 @@ export class CreateAccountComponent {
   newAccountForm = new FormGroup({
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
+    teamName: new FormControl('')
   });
 
   handleSubmit(event: Event) {
@@ -30,9 +31,11 @@ export class CreateAccountComponent {
 
     const email = this.newAccountForm.value.email as string;
     const password = this.newAccountForm.value.password as string;
-    const loginDto: LoginDto = {
+    const teamName = this.newAccountForm.value.teamName as string;
+    const loginDto: AccountDto = {
       email: email,
-      password: password
+      password: password,
+      teamName: teamName
     }
 
     this.userService.createAccount(loginDto).pipe(
