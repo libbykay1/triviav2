@@ -19,7 +19,9 @@ export class TeamService {
     return this.http.post<TeamResponseDto>(`${baseUrl}/${gameId}/new`, payload);
   }
 
-  
+  getTeamByUser(userId: number): Observable<TeamResponseDto> {
+    return this.http.get<TeamResponseDto>(`${baseUrl}/${userId}/team`);
+  }
 
   setTeamName(name: string) {
     this.teamNameSource.next(name);

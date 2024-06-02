@@ -6,6 +6,8 @@ import { of } from 'rxjs';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { AccountDto } from '../models/AccountDto';
+import { TeamService } from '../team.service';
+import { TeamResponseDto } from '../models/TeamResponseDto';
 
 @Component({
   selector: 'app-create-account',
@@ -16,7 +18,7 @@ import { AccountDto } from '../models/AccountDto';
 })
 export class CreateAccountComponent {
 
-  constructor(private userService: UserService, private router: Router) {
+  constructor(private userService: UserService, private teamService: TeamService, private router: Router) {
 
   }
 
@@ -45,7 +47,15 @@ export class CreateAccountComponent {
       })
     ).subscribe(response => {
       if (response) {
+        const userId = this.userService.getUserId();
+        if (userId !== null) {
+          this.teamService.getTeamByUser(userId).subscribe((teamResponse: TeamResponseDto) => {
+            this.userService.setTeamInfo(teamResponse);
+            this.router.navigate(['account/home']);
+          })
+        } else {
         this.router.navigate(['account/home']);
+        }
       }
     });
   }

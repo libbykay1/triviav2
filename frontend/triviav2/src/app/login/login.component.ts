@@ -6,6 +6,8 @@ import { catchError } from 'rxjs';
 import { of } from 'rxjs';
 import { LoginDto } from '../models/LoginDto';
 import { UserService } from '../user.service';
+import { TeamService } from '../team.service';
+import { TeamResponseDto } from '../models/TeamResponseDto';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,7 @@ import { UserService } from '../user.service';
 })
 export class LoginComponent {
 
-  constructor(private userService: UserService, private router: Router) {
+  constructor(private userService: UserService, private teamService:TeamService, private router: Router) {
 
   }
 
@@ -42,7 +44,15 @@ export class LoginComponent {
       })
     ).subscribe(response => {
       if (response) {
+        const userId = this.userService.getUserId();
+        if (userId !== null) {
+          this.teamService.getTeamByUser(userId).subscribe((teamResponse: TeamResponseDto) => {
+            this.userService.setTeamInfo(teamResponse);
+            this.router.navigate(['account/home']);
+          })
+        } else {
         this.router.navigate(['account/home']);
+        }
       }
     });
   }
