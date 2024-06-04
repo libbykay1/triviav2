@@ -19,6 +19,15 @@ export class TeamService {
     return this.http.post<TeamResponseDto>(`${baseUrl}/${gameId}/new`, payload);
   }
 
+  changeTeamName(teamRequestDto: TeamRequestDto, teamId: number): Observable<TeamResponseDto> {
+    const payload = { ...teamRequestDto, teamId};
+    return this.http.patch<TeamResponseDto>(`${baseUrl}/${teamId}/changename`, payload);
+  }
+
+  joinGame(teamId: number, gameId: number): Observable<TeamResponseDto> {
+    return this.http.patch<TeamResponseDto>(`${baseUrl}/${teamId}/${gameId}/join`, {});
+  }
+
   getTeamByUser(userId: number): Observable<TeamResponseDto> {
     return this.http.get<TeamResponseDto>(`${baseUrl}/${userId}/team`);
   }

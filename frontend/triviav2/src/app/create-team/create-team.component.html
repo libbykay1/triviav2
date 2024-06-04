@@ -1,0 +1,10 @@
+
+<app-header showLoginButton="true" showLogoutButton="false"></app-header>
+<main>
+  <form [formGroup]="teamNameForm" (ngSubmit)="handleSubmit($event)">
+    <label for="team-name">
+      <input type="text" formControlName="teamName" id="team-name" placeholder="Team Name" />
+    </label>
+    <button type="submit" [disabled]="!teamNameForm.valid">Save</button>
+  </form>
+</main>

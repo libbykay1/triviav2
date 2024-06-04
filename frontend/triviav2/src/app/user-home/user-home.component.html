@@ -1,7 +1,13 @@
 
 <app-header showLoginButton="false"showLogoutButton="true"></app-header>
 <main>
-  <p>
+  <div class="content-1">
    Team Name: {{ teamInfo?.teamName || 'No team yet!' }}
-  </p>
+  </div>
+  <div class="content-2">
+    @if (teamInfo) {
+    <a href="" (click)="playAsThisTeam($event)">Play as this team</a>
+    }
+    <a routerLink="/account/teamname">Change team name</a>
+  </div>
 </main>

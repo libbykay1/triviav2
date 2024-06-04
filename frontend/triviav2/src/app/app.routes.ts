@@ -4,6 +4,7 @@ import { WaitingRoomComponent } from './waiting-room/waiting-room.component';
 import { LoginComponent } from './login/login.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { CreateTeamComponent } from './create-team/create-team.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path: 'account/create',
         component: CreateAccountComponent,
+    },
+    {
+        path: 'account/teamname',
+        component: CreateTeamComponent,
     },
 ];
