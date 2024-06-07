@@ -34,6 +34,19 @@ export class UserService {
     );
   }
 
+  logout(): Observable<void> {
+    return this.http.post<void>(`${baseUrl}/logout`, {}).pipe(
+      tap(() => {
+        this.userId = null;
+        this.teamInfo = null;
+        if (isPlatformBrowser(this.platformId)) {
+          localStorage.removeItem(USER_ID_KEY);
+          localStorage.removeItem(TEAM_INFO_KEY);
+        }
+      })
+    );
+  }
+
   createAccount(loginDto: LoginDto): Observable<AuthResponse> {
     const payload = { ...loginDto };
     return this.http.post<AuthResponse>(`${baseUrl}/register`, payload).pipe(

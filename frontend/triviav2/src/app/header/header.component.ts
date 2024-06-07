@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { RouterOutlet, RouterLink, Router } from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-header',
@@ -11,5 +12,16 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 export class HeaderComponent {
   @Input() showLoginButton="true";
   @Input() showLogoutButton="true";
+
+  constructor(
+    private userService: UserService,
+    private router: Router
+  ) {}
+
+  logout() {
+    this.userService.logout().subscribe(() => {
+      this.router.navigate(['/play']);
+    });
+  }
 
 }
