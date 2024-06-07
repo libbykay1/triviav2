@@ -30,4 +30,11 @@ main {
 
 a {
     margin-bottom: 10px;
+    color: #0d5098;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
 }
