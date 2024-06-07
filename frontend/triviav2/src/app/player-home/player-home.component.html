@@ -12,12 +12,15 @@
       </form>
       <div>
         Current teams:
-        <ul>
-
+        <table>
+          <tbody>
             @for (team of teams; track team.id) {
-              <li>{{ team.teamName }}</li>
+              <tr>
+                <td>{{ team.teamName }}</td>
+                <td><a (click)="joinTeam(team.id)">Join this team</a></td>
+              </tr>
             }
-
-        </ul>
+          </tbody>
+        </table>
       </div>
     </main>

@@ -40,7 +40,7 @@ export class UserHomeComponent {
     if (this.teamInfo) {
       const teamId = this.teamInfo.id;
       const gameId = 1;
-      this.teamService.setTeamName(this.teamInfo.teamName);
+      this.teamService.setTeam(this.teamInfo);
       this.teamService.joinGame(teamId, gameId).pipe(
         catchError(error => {
           console.error('Error joining game:', error);

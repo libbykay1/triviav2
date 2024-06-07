@@ -18,4 +18,6 @@ public interface TeamService {
 
 	List<TeamResponseDto> getAllGameTeams(Long gameId);
 
+	TeamResponseDto getTeam(Long teamId);
+
 }

@@ -17,6 +17,11 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/v1/team")
 public class TeamController {
 	private final TeamService teamService;
+	
+	@GetMapping("{teamId}")
+	public TeamResponseDto getTeam(@PathVariable Long teamId) {
+		return teamService.getTeam(teamId);
+	}
 
 	@PostMapping("{gameId}/new")
 	public TeamResponseDto createTeam(@RequestBody TeamRequestDto teamRequestDto, @PathVariable Long gameId) {

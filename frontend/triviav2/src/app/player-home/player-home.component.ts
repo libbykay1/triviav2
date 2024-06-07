@@ -43,19 +43,27 @@ export class PlayerHomeComponent {
     const teamRequestDto: TeamRequestDto = {
       teamName: newTeamName
     };
-    const gameId = 1;
 
-    this.teamService.createTeam(teamRequestDto, gameId).pipe(
+    this.teamService.createTeam(teamRequestDto, this.gameId).pipe(
       catchError(error => {
         console.error('Error creating team:', error);
         return of(null);
       })
     ).subscribe(response => {
       if (response) {
-        this.teamService.setTeamName(newTeamName);
+        this.teamService.setTeam(response);
         this.router.navigate(['play/wait']);
       }
     });
+  }
+
+  joinTeam(teamId: number): void {
+    this.teamService.getTeamById(teamId).subscribe((team) => {
+      if(team) {
+        this.teamService.setTeam(team);
+        this.router.navigate(['play/wait'], { queryParams: {teamId: team.id}})
+      }
+    })
   }
 
 }

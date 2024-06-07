@@ -90,6 +90,11 @@ public class TeamServiceImpl implements TeamService {
 		return response;
 	}
 
+	@Override
+	public TeamResponseDto getTeam(Long teamId) {
+		return teamMapper.entityToResponseDto(getTeamById(teamId));
+	}
+
 
 
 	
