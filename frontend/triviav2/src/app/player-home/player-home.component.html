@@ -10,4 +10,14 @@
         </label>
         <button type="submit" [disabled]="!teamNameForm.valid">Create Team</button>
       </form>
+      <div>
+        Current teams:
+        <ul>
+
+            @for (team of teams; track team.id) {
+              <li>{{ team.teamName }}</li>
+            }
+
+        </ul>
+      </div>
     </main>

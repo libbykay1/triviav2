@@ -6,6 +6,7 @@ import { TeamService } from '../team.service';
 import { TeamRequestDto } from '../models/TeamRequestDto';
 import { catchError } from 'rxjs';
 import { of } from 'rxjs';
+import { TeamResponseDto } from '../models/TeamResponseDto';
 
 
 
@@ -18,6 +19,9 @@ import { of } from 'rxjs';
 })
 export class PlayerHomeComponent {
 
+  teams: TeamResponseDto[] = [];
+  gameId: number = 1;
+
   constructor(private teamService: TeamService, private router: Router) {
 
   }
@@ -25,6 +29,12 @@ export class PlayerHomeComponent {
   teamNameForm = new FormGroup({
     teamName: new FormControl('', Validators.required),
   });
+
+  ngOnInit(): void {
+    this.teamService.getAllGameTeams(this.gameId).subscribe((data: TeamResponseDto[]) => {
+      this.teams = data;
+    });
+  }
 
   handleSubmit(event: Event) {
     event.preventDefault();

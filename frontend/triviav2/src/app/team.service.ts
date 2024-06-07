@@ -32,6 +32,10 @@ export class TeamService {
     return this.http.get<TeamResponseDto>(`${baseUrl}/${userId}/team`);
   }
 
+  getAllGameTeams(gameId: number): Observable<TeamResponseDto[]> {
+    return this.http.get<TeamResponseDto[]>(`${baseUrl}/${gameId}/teams`);
+  }
+
   setTeamName(name: string) {
     this.teamNameSource.next(name);
   }
