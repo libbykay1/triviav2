@@ -24,6 +24,7 @@ com/libbi/trivia/token/TokenRepository.class
 com/libbi/trivia/auth/AuthenticationResponse.class
 com/libbi/trivia/round/Round.class
 com/libbi/trivia/config/LogoutService.class
+com/libbi/trivia/question/Type.class
 com/libbi/trivia/submission/Submission.class
 com/libbi/trivia/Seeder.class
 com/libbi/trivia/config/JwtService.class
@@ -32,6 +33,7 @@ com/libbi/trivia/team/TeamMapperImpl.class
 com/libbi/trivia/game/GameServiceImpl.class
 com/libbi/trivia/team/Team.class
 com/libbi/trivia/team/TeamServiceImpl.class
+com/libbi/trivia/answer/AnswerRepository.class
 com/libbi/trivia/user/UserMapperImpl.class
 com/libbi/trivia/user/UserRepository.class
 com/libbi/trivia/game/GameService.class

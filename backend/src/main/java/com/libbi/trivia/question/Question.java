@@ -2,8 +2,11 @@ package com.libbi.trivia.question;
 
 import com.libbi.trivia.answer.Answer;
 import com.libbi.trivia.round.Round;
+import com.libbi.trivia.user.Role;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -37,13 +40,16 @@ public class Question {
 	
 	private String text;
 	
+	private String correctAnswer;
+	
 	private String imageUrl;
 	
-	private String type;
+    @Enumerated(EnumType.STRING)
+    private Type type;
 	
 	private boolean deleted = false;	
 	@OneToOne
     @JoinColumn(name = "answer_id")
-	private Answer correctAnswer;
+	private Answer answer;
 	
 }

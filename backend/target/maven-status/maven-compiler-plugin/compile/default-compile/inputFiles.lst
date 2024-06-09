@@ -13,6 +13,7 @@
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/team/TeamServiceImpl.java
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/team/TeamRepository.java
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/config/JwtService.java
+/Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/question/Type.java
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/config/ApplicationConfig.java
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/token/TokenRepository.java
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/user/UserService.java
@@ -24,6 +25,7 @@
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/submission/Submission.java
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/game/Game.java
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/team/TeamController.java
+/Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/answer/AnswerRepository.java
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/auth/AuthenticationService.java
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/round/Round.java
 /Users/elizabetheilbert/projects/trivia/triviav2/triviav2/backend/src/main/java/com/libbi/trivia/round/RoundRepository.java
