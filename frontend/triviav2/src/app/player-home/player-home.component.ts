@@ -7,6 +7,7 @@ import { TeamRequestDto } from '../models/TeamRequestDto';
 import { catchError } from 'rxjs';
 import { of } from 'rxjs';
 import { TeamResponseDto } from '../models/TeamResponseDto';
+import { RoundService } from '../round.service';
 
 
 
@@ -20,9 +21,9 @@ import { TeamResponseDto } from '../models/TeamResponseDto';
 export class PlayerHomeComponent {
 
   teams: TeamResponseDto[] = [];
-  gameId: number = 1;
+  gameId: number = this.roundService.gameId;
 
-  constructor(private teamService: TeamService, private router: Router) {
+  constructor(private teamService: TeamService, private roundService: RoundService, private router: Router) {
 
   }
 

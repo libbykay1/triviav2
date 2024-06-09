@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { CreateTeamComponent } from './create-team/create-team.component';
+import { DisplayRoundComponent } from './display-round/display-round.component';
 
 export const routes: Routes = [
     {
@@ -35,5 +36,9 @@ export const routes: Routes = [
     {
         path: 'account/teamname',
         component: CreateTeamComponent,
+    },
+    {
+        path: 'play/round',
+        component: DisplayRoundComponent,
     },
 ];

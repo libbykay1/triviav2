@@ -1,0 +1,13 @@
+
+<app-header showLoginButton="false" showLogoutButton="false"></app-header>
+<main>
+
+    <ol>
+        @for (question of questions; track question.id) {
+            <li>{{ question.text }}</li>
+        }
+    </ol>
+
+
+
+</main>
