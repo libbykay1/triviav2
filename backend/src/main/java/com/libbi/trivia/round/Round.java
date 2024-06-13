@@ -5,12 +5,15 @@ import java.util.List;
 import com.libbi.trivia.game.Game;
 import com.libbi.trivia.question.Question;
 import com.libbi.trivia.submission.Submission;
+import com.libbi.trivia.user.Role;
 import com.libbi.trivia.user.User;
 
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -59,9 +62,11 @@ public class Round {
 	
 	private User author;
 	
-	private String category;
+	@Enumerated(EnumType.STRING)
+    private Type type;
 	
-	private String type;
+	@Enumerated(EnumType.STRING)
+    private Category category;
 	
 	private boolean published;
 	

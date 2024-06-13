@@ -4,6 +4,7 @@ import com.libbi.trivia.answer.Answer;
 import com.libbi.trivia.round.Round;
 import com.libbi.trivia.user.Role;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -40,6 +41,7 @@ public class Question {
 	
 	private String text;
 	
+	@Column(name = "correct_answer", columnDefinition = "TEXT")
 	private String correctAnswer;
 	
 	private String imageUrl;
@@ -48,6 +50,7 @@ public class Question {
     private Type type;
 	
 	private boolean deleted = false;	
+	
 	@OneToOne
     @JoinColumn(name = "answer_id")
 	private Answer answer;
