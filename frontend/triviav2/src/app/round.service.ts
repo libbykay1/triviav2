@@ -27,9 +27,6 @@ export class RoundService {
 
     setCurrentRound(round: Round) {
         this.roundSource.next(round);
-    }
-
-    setQuestions(questions: Question[]) {
-        this.questionsSource.next(questions);
+        this.questionsSource.next(round.questions);
     }
 }

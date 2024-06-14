@@ -252,7 +252,7 @@ public class Seeder implements CommandLineRunner {
 		
 		Question question3bg = new Question();
 		question3bg.setRound(multipleAnswerRound);
-		question3bg.setText("Name the 3 card in Sorry! that, when drawn, allow a player to remove a piece from Start:");
+		question3bg.setText("Name the 3 cards in Sorry! that, when drawn, allow a player to move a piece out of Start:");
 		question3bg.setDeleted(false);
 		question3bg.setCorrectAnswer("1, 2, and Sorry!");
 		question3bg.setType(MULTIPLE_ANSWERS);

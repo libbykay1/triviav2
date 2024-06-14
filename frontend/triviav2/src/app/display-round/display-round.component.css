@@ -1,8 +1,9 @@
 main {
     background-color: white;
     font-family: "Lato", sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-style: normal;
+    font-size: large;
     padding: 20px;
     margin-top: 40px;
     display: flex;
@@ -59,3 +60,23 @@ button {
 button:disabled {
     color: rgb(199, 197, 197);
 }
+
+
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 1.5em;
+  }
+
+  li {
+    margin-bottom: 1em;
+  }
+
+
+
+  input {
+    margin-bottom: 1em;
+    width: 75%;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }

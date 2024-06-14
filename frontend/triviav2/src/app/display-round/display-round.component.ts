@@ -27,15 +27,18 @@ export class DisplayRoundComponent {
   })
 
   ngOnInit() {
+    this.roundService.getRound(1, 2).subscribe((round: Round) => {
+      this.round = round;
+      this.questions = round.questions;
+    });
     this.teamService.currentTeam.subscribe((team) => {
       this.teamId = team?.id ?? null;
     });
-    this.roundService.currentRound.subscribe((round) => {
-      this.round = round;
-    });
-    this.roundService.currentQuestions.subscribe((questions) => {
-      this.questions = questions;
-    })
+
+  }
+
+  createArray(number: number): number[] {
+    return new Array(number);
   }
 
   handleSubmit(event: Event) {
