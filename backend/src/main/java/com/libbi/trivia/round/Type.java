@@ -6,6 +6,6 @@ public enum Type {
 	MATCHING,
 	PICTURE,
 	ONE_QUESTION,
-	ONE_ANSWER
+	ONE_ANSWER, 
 
 }

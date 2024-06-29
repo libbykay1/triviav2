@@ -1,0 +1,18 @@
+
+<app-header showLoginButton="false" showLogoutButton="false"></app-header>
+<main>
+    @if (round) {
+    <h1>{{ round.title }}</h1>
+
+    <ol>
+        @for (question of questions; track question.id) {
+            <li>{{ question.text }}</li>
+            @for (i of createArray(question.answer.numberOfAnswers); track i) {
+            <input type="text">
+            }
+        }
+    </ol>
+    }
+
+
+</main>

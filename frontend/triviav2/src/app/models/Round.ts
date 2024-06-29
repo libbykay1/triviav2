@@ -5,4 +5,9 @@ export interface Round {
     title: string;
     prompt: string;
     questions: Question[];
+    type: Type;
+}
+
+export enum Type {
+    QUESTION_AND_ANSWER = 'QUESTION_AND_ANSWER',
 }

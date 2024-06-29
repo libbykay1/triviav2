@@ -20,6 +20,7 @@ public class RoundResponseDto {
 	private boolean visible;
 	private boolean published;
 	private String category;
+	private String type;
 	private List<String> tags;
 	private List<QuestionResponseDto> questions;
 
