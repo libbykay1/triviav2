@@ -83,7 +83,7 @@ public class Seeder implements CommandLineRunner {
 		
 		Round connectionRound = new Round();
 		connectionRound.setTitle("Find the connection");
-		connectionRound.setPrompt("See if you can identify what connects all the answers in this round. 1 point for each correct answer.");
+		connectionRound.setPrompt("<i>See if you can identify what connects all the answers in this round. 1 point for each correct answer.</i>");
 		connectionRound.setRoundNumber(1);
 		connectionRound.setDeleted(false);
 		connectionRound.setAuthor(exampleQuizmaster);
@@ -98,7 +98,7 @@ public class Seeder implements CommandLineRunner {
 		
 		Round multipleAnswerRound = new Round();
 		multipleAnswerRound.setTitle("Classic Board Games");
-		multipleAnswerRound.setPrompt("For questions with more than one answer, each correct answer is worth 1 point.");
+		multipleAnswerRound.setPrompt("<i>For questions with more than one answer, each correct answer is worth 1 point.</i>");
 		multipleAnswerRound.setRoundNumber(2);
 		multipleAnswerRound.setDeleted(false);
 		multipleAnswerRound.setAuthor(exampleQuizmaster);
@@ -188,16 +188,16 @@ public class Seeder implements CommandLineRunner {
 		
 		Question question2 = new Question();
 		question2.setRound(connectionRound);
-		question2.setText("What is the name of the tomato in VeggieTales?");
+		question2.setText("What is the name of the tomato in <i>VeggieTales</i>?");
 		question2.setDeleted(false);
 		question2.setCorrectAnswer("Bob");
 		question2.setType(SINGLE_ANSWER);
 		
 		Question question3 = new Question();
 		question3.setRound(connectionRound);
-		question3.setText("Name the third and final single from Kanye West’s The Life of Pablo, featuring vocals from Post Malone and Ty Dolla Sign: ");
+		question3.setText("Name the third and final single from Kanye West’s <i>The Life of Pablo<i>, featuring vocals from Post Malone and Ty Dolla Sign: ");
 		question3.setDeleted(false);
-		question3.setCorrectAnswer("Fade");
+		question3.setCorrectAnswer("\"Fade\"");
 		question3.setType(SINGLE_ANSWER);
 		
 		Question question4 = new Question();
@@ -205,7 +205,7 @@ public class Seeder implements CommandLineRunner {
 		question4.setText("What show is being represented at this 2010 Comic-Con panel?");
 		question4.setImageUrl("https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Fringe_cast_sdcc_2010_cropped.jpg/2000px-Fringe_cast_sdcc_2010_cropped.jpg");
 		question4.setDeleted(false);
-		question4.setCorrectAnswer("Fringe");
+		question4.setCorrectAnswer("<i>Fringe</i>");
 		question4.setType(SINGLE_ANSWER);
 		
 		Question question5 = new Question();
@@ -217,14 +217,14 @@ public class Seeder implements CommandLineRunner {
 		
 		Question question6 = new Question();
 		question6.setRound(connectionRound);
-		question6.setText("Mark Zuckerberg participated in tennis and what other sport when he was in high school?");
+		question6.setText("Mark Zuckerberg participated in tennis and <b>what other sport</b> when he was in high school?");
 		question6.setDeleted(false);
 		question6.setCorrectAnswer("Crew");
 		question6.setType(SINGLE_ANSWER);
 		
 		Question question7 = new Question();
 		question7.setRound(connectionRound);
-		question7.setText("In the earliest productions of Peter Pan, there was no mention of this magical substance; it was added into the script after several reports of children injuring themselves trying to fly off their beds: ");
+		question7.setText("In the earliest productions of <i>Peter Pan</i>, there was no mention of <b>this magical substance</b>; it was added into the script after several reports of children injuring themselves trying to fly off their beds: ");
 		question7.setDeleted(false);
 		question7.setCorrectAnswer("Pixie dust");
 		question7.setType(SINGLE_ANSWER);
@@ -238,35 +238,35 @@ public class Seeder implements CommandLineRunner {
 		
 		Question question1bg = new Question();
 		question1bg.setRound(multipleAnswerRound);
-		question1bg.setText("Name the only tile in English-language Scrabble that is worth exactly 5 points:");
+		question1bg.setText("Name the only tile in English-language <i>Scrabble</i> that is worth exactly 5 points:");
 		question1bg.setDeleted(false);
 		question1bg.setCorrectAnswer("K");
 		question1bg.setType(SINGLE_ANSWER);
 		
 		Question question2bg = new Question();
 		question2bg.setRound(multipleAnswerRound);
-		question2bg.setText("Name the 2 player tokens in original Monopoly whose names start with 'T':");
+		question2bg.setText("Name the 2 player tokens in original <i>Monopoly</i> whose names start with 'T':");
 		question2bg.setDeleted(false);
 		question2bg.setCorrectAnswer("Thimble and Top Hat");
 		question2bg.setType(MULTIPLE_ANSWERS);
 		
 		Question question3bg = new Question();
 		question3bg.setRound(multipleAnswerRound);
-		question3bg.setText("Name the 3 cards in Sorry! that, when drawn, allow a player to move a piece out of Start:");
+		question3bg.setText("Name the 3 cards in <i>Sorry!</i> that, when drawn, allow a player to move a piece out of Start:");
 		question3bg.setDeleted(false);
 		question3bg.setCorrectAnswer("1, 2, and Sorry!");
 		question3bg.setType(MULTIPLE_ANSWERS);
 		
 		Question question4bg = new Question();
 		question4bg.setRound(multipleAnswerRound);
-		question4bg.setText("Name the 4 colors of circles in classic Twister:");
+		question4bg.setText("Name the 4 colors of circles in classic <i>Twister</i>:");
 		question4bg.setDeleted(false);
 		question4bg.setCorrectAnswer("Red, blue, green, yellow");
 		question4bg.setType(MULTIPLE_ANSWERS);
 		
 		Question question5bg = new Question();
 		question5bg.setRound(multipleAnswerRound);
-		question5bg.setText("Name the 5 pieces in classic Operation that are worth less than $200:");
+		question5bg.setText("Name the 5 pieces in classic <i>Operation</i> that are worth less than $200:");
 		question5bg.setDeleted(false);
 		question5bg.setCorrectAnswer("Adam's apple, wrenched ankle, water on the knee, broken heart, and spare ribs");
 		question5bg.setType(MULTIPLE_ANSWERS);

@@ -2,16 +2,25 @@
 <app-header showLoginButton="false" showLogoutButton="false"></app-header>
 <main>
     @if (round) {
-    <h1>{{ round.title }}</h1>
-
+    <h1>Round {{round.roundNumber}}: {{ round.title }}</h1>
+    <p [innerHTML]="round.prompt"></p>
+    <form [formGroup]="submissionForm" (ngSubmit)="handleSubmit($event)">
     <ol>
-        @for (question of questions; track question.id) {
-            <li>{{ question.text }}</li>
-            @for (i of createArray(question.answer.numberOfAnswers); track i) {
-            <input type="text">
+        @for (question of questions; track question.id; let questionIndex = $index) {
+            <li>
+                <span [innerHTML]="question.text"></span>
+                
+                @if(question.imageUrl) {
+                    <img src={{question.imageUrl}} alt="">
+                }
+            </li>
+            @for (i of createArray(question.answer.numberOfAnswers); track i; let iIndex = $index) {
+            <input type="text" [formControlName]="'answer_' + questionIndex + '_' + iIndex">
             }
         }
     </ol>
+<button type="submit">Submit</button>
+</form>
     }
 
 

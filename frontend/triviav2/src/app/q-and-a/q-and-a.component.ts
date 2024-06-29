@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { TeamResponseDto } from '../models/TeamResponseDto';
 import { Round } from '../models/Round';
 import { Question } from '../models/Question';
@@ -20,12 +20,13 @@ export class QAndAComponent {
   teamId: number | null = null;
   round: Round | null = null;
   questions: Question[] = [];
+  submissionForm: FormGroup;
 
-  constructor(private teamService: TeamService, private roundService: RoundService) {}
+  constructor(private teamService: TeamService, private roundService: RoundService, private fb: FormBuilder) {
+    this.submissionForm = this.fb.group({});
+  }
 
-  submissionForm = new FormGroup({
 
-  })
 
   ngOnInit() {
 
@@ -35,9 +36,18 @@ export class QAndAComponent {
     this.roundService.getRound(1, 1).subscribe((round: Round) => {
       this.round = round;
       this.questions = round.questions;
+      this.createFormControls();
     });
 
 
+  }
+
+  createFormControls() {
+    this.questions.forEach((question, index) => {
+      for (let i = 0; i < question.answer.numberOfAnswers; i++) {
+        this.submissionForm.addControl(`answer_${index}_${i}`, new FormControl());
+      }
+    })
   }
 
   createArray(number: number): number[] {
@@ -46,5 +56,11 @@ export class QAndAComponent {
 
   handleSubmit(event: Event) {
     event.preventDefault();
+    if (this.submissionForm.valid) {
+      if (window.confirm("Are you sure you're ready to submit your answers?")) {
+        console.log(this.submissionForm.value);
+        // Process the form submission here
+      }
+    }
   }
 }
