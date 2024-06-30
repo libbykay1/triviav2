@@ -11,7 +11,10 @@ public class RoundServiceImpl implements RoundService{
 	private final RoundRepository roundRepository;
 	private final RoundMapper roundMapper;
 	
-
+	@Override
+	public Round getRoundById(Long id) {
+		return roundRepository.findByIdAndDeletedFalse(id);
+	}
 
 
 

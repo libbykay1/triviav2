@@ -21,7 +21,8 @@ import lombok.RequiredArgsConstructor;
 public class SecurityConfiguration {
     private static final String[] WHITE_LIST_URL = {"/api/v1/auth/**",
             "/api/v1/team/**",
-            "/api/v1/round/**"};
+            "/api/v1/round/**",
+            "/api/v1/submission/**"};
     private final JwtAuthenticationFilter jwtAuthFilter;
     private final AuthenticationProvider authenticationProvider;
 	private final LogoutHandler logoutHandler;

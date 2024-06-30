@@ -8,4 +8,6 @@ public interface RoundRepository extends JpaRepository<Round, Long>{
 
 	Round findByGameIdAndRoundNumber(Long gameId, Integer roundNumber);
 
+	Round findByIdAndDeletedFalse(Long id);
+
 }

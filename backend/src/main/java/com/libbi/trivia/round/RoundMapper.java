@@ -8,7 +8,7 @@ import com.libbi.trivia.question.QuestionMapper;
 
 @Mapper(componentModel = "spring", uses = { QuestionMapper.class })
 public interface RoundMapper {
-	RoundMapper INSTANCE = Mappers.getMapper(RoundMapper.class);
+	
 
 	@Mapping(source = "game.id", target = "gameId")
 	RoundResponseDto entityToDto(Round round);
