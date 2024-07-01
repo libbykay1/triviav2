@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class AnswerResponseDto {
 	private Long id;
 	private List<String> correct;
-	private Integer numberOfAnswers;
+	private Double numberOfAnswers;
 	private Double availablePoints;
 
 }

@@ -431,7 +431,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct1 = new ArrayList<>();
 		correct1.add("bowl");
 		answer1.setCorrect(correct1);
-		answer1.setNumberOfAnswers(1);
+		answer1.setNumberOfAnswers(1.0);
 		answer1.setDeleted(false);
 		
 		Answer answer2 = new Answer();
@@ -440,7 +440,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct2 = new ArrayList<>();
 		correct2.add("bob");
 		answer2.setCorrect(correct2);
-		answer2.setNumberOfAnswers(1);
+		answer2.setNumberOfAnswers(1.0);
 		answer2.setDeleted(false);
 		
 		Answer answer3 = new Answer();
@@ -449,7 +449,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct3 = new ArrayList<>();
 		correct3.add("fade");
 		answer3.setCorrect(correct3);
-		answer3.setNumberOfAnswers(1);
+		answer3.setNumberOfAnswers(1.0);
 		answer3.setDeleted(false);
 		
 		Answer answer4 = new Answer();
@@ -458,7 +458,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct4 = new ArrayList<>();
 		correct4.add("fringe");
 		answer4.setCorrect(correct4);
-		answer4.setNumberOfAnswers(1);
+		answer4.setNumberOfAnswers(1.0);
 		answer4.setDeleted(false);
 		
 		Answer answer5 = new Answer();
@@ -467,7 +467,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct5 = new ArrayList<>();
 		correct5.add("rachel");
 		answer5.setCorrect(correct5);
-		answer5.setNumberOfAnswers(1);
+		answer5.setNumberOfAnswers(1.0);
 		answer5.setDeleted(false);
 		
 		Answer answer6 = new Answer();
@@ -477,7 +477,7 @@ public class Seeder implements CommandLineRunner {
 		correct6.add("crew");
 		correct6.add("row");
 		answer6.setCorrect(correct6);
-		answer6.setNumberOfAnswers(1);
+		answer6.setNumberOfAnswers(1.0);
 		answer6.setDeleted(false);
 		
 		Answer answer7 = new Answer();
@@ -488,7 +488,7 @@ public class Seeder implements CommandLineRunner {
 		correct7.add("pixy");
 		correct7.add("dust");
 		answer7.setCorrect(correct7);
-		answer7.setNumberOfAnswers(1);
+		answer7.setNumberOfAnswers(1.0);
 		answer7.setDeleted(false);
 		
 		Answer answer8 = new Answer();
@@ -497,7 +497,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct8 = new ArrayList<>();
 		correct8.add("hair");
 		answer8.setCorrect(correct8);
-		answer8.setNumberOfAnswers(1);
+		answer8.setNumberOfAnswers(1.0);
 		answer8.setDeleted(false);
 		
 		Answer answer1bg = new Answer();
@@ -506,7 +506,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct1bg = new ArrayList<>();
 		correct1bg.add("k");
 		answer1bg.setCorrect(correct1bg);
-		answer1bg.setNumberOfAnswers(1);
+		answer1bg.setNumberOfAnswers(1.0);
 		answer1bg.setDeleted(false);
 		
 		Answer answer2bg = new Answer();
@@ -517,7 +517,7 @@ public class Seeder implements CommandLineRunner {
 		correct2bg.add("tophat");
 		correct2bg.add("top hat");
 		answer2bg.setCorrect(correct2bg);
-		answer2bg.setNumberOfAnswers(2);
+		answer2bg.setNumberOfAnswers(2.0);
 		answer2bg.setDeleted(false);
 		
 		Answer answer3bg = new Answer();
@@ -530,7 +530,7 @@ public class Seeder implements CommandLineRunner {
 		correct3bg.add("two");
 		correct3bg.add("sorry");
 		answer3bg.setCorrect(correct3bg);
-		answer3bg.setNumberOfAnswers(3);
+		answer3bg.setNumberOfAnswers(3.0);
 		answer3bg.setDeleted(false);
 		
 		Answer answer4bg = new Answer();
@@ -542,7 +542,7 @@ public class Seeder implements CommandLineRunner {
 		correct4bg.add("red");
 		correct4bg.add("yellow");
 		answer4bg.setCorrect(correct4bg);
-		answer4bg.setNumberOfAnswers(4);
+		answer4bg.setNumberOfAnswers(4.0);
 		answer4bg.setDeleted(false);
 		
 		Answer answer5bg = new Answer();
@@ -557,7 +557,7 @@ public class Seeder implements CommandLineRunner {
 		correct5bg.add("heart");
 		correct5bg.add("rib");
 		answer5bg.setCorrect(correct5bg);
-		answer5bg.setNumberOfAnswers(5);
+		answer5bg.setNumberOfAnswers(5.0);
 		answer5bg.setDeleted(false);
 		
 		Answer answer1jm = new Answer();
@@ -568,7 +568,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct1jm = new ArrayList<>();
 		correct1jm.add("Once Upon a One More Time");
 		answer1jm.setCorrect(correct1jm);
-		answer1jm.setNumberOfAnswers(1);
+		answer1jm.setNumberOfAnswers(1.0);
 		answer1jm.setDeleted(false);
 		
 		Answer answer2jm = new Answer();
@@ -578,7 +578,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct2jm = new ArrayList<>();
 		correct2jm.add("Tommy");
 		answer2jm.setCorrect(correct2jm);
-		answer2jm.setNumberOfAnswers(1);
+		answer2jm.setNumberOfAnswers(1.0);
 		answer2jm.setDeleted(false);
 		
 		Answer answer3jm = new Answer();
@@ -588,7 +588,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct3jm = new ArrayList<>();
 		correct3jm.add("Mamma Mia!");
 		answer3jm.setCorrect(correct3jm);
-		answer3jm.setNumberOfAnswers(1);
+		answer3jm.setNumberOfAnswers(1.0);
 		answer3jm.setDeleted(false);
 		
 		Answer answer4jm = new Answer();
@@ -598,7 +598,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct4jm = new ArrayList<>();
 		correct4jm.add("Jagged Little Pill");
 		answer4jm.setCorrect(correct4jm);
-		answer4jm.setNumberOfAnswers(1);
+		answer4jm.setNumberOfAnswers(1.0);
 		answer4jm.setDeleted(false);
 		
 		Answer answer5jm = new Answer();
@@ -608,7 +608,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct5jm = new ArrayList<>();
 		correct5jm.add("Jersey Boys");
 		answer5jm.setCorrect(correct5jm);
-		answer5jm.setNumberOfAnswers(1);
+		answer5jm.setNumberOfAnswers(1.0);
 		answer5jm.setDeleted(false);
 		
 		Answer answer6jm = new Answer();
@@ -618,7 +618,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct6jm = new ArrayList<>();
 		correct6jm.add("Interstella 5555: The 5tory of the 5ecret 5tar 5ystem");
 		answer6jm.setCorrect(correct6jm);
-		answer6jm.setNumberOfAnswers(1);
+		answer6jm.setNumberOfAnswers(1.0);
 		answer6jm.setDeleted(false);
 		
 		Answer answer7jm = new Answer();
@@ -628,7 +628,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct7jm = new ArrayList<>();
 		correct7jm.add("Viva Forever!");
 		answer7jm.setCorrect(correct7jm);
-		answer7jm.setNumberOfAnswers(1);
+		answer7jm.setNumberOfAnswers(1.0);
 		answer7jm.setDeleted(false);
 		
 		Answer answer8jm = new Answer();
@@ -638,7 +638,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct8jm = new ArrayList<>();
 		correct8jm.add("Lazarus");
 		answer8jm.setCorrect(correct8jm);
-		answer8jm.setNumberOfAnswers(1);
+		answer8jm.setNumberOfAnswers(1.0);
 		answer8jm.setDeleted(false);
 		
 		Answer answer1cl = new Answer();
@@ -647,7 +647,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct1cl = new ArrayList<>();
 		correct1cl.add("faze clan");
 		answer1cl.setCorrect(correct1cl);
-		answer1cl.setNumberOfAnswers(1);
+		answer1cl.setNumberOfAnswers(1.0);
 		answer1cl.setDeleted(false);
 		
 		Answer answer2cl = new Answer();
@@ -657,7 +657,7 @@ public class Seeder implements CommandLineRunner {
 		correct2cl.add("rolex");
 		correct2cl.add("rollex");
 		answer2cl.setCorrect(correct2cl);
-		answer2cl.setNumberOfAnswers(1);
+		answer2cl.setNumberOfAnswers(1.0);
 		answer2cl.setDeleted(false);
 		
 		Answer answer3cl = new Answer();
@@ -669,7 +669,7 @@ public class Seeder implements CommandLineRunner {
 		correct3cl.add("nestlee");
 		correct3cl.add("neslee");
 		answer3cl.setCorrect(correct3cl);
-		answer3cl.setNumberOfAnswers(1);
+		answer3cl.setNumberOfAnswers(1.0);
 		answer3cl.setDeleted(false);
 		
 		Answer answer4cl = new Answer();
@@ -680,7 +680,7 @@ public class Seeder implements CommandLineRunner {
 		correct4cl.add("johnnie");
 		correct4cl.add("walker");
 		answer4cl.setCorrect(correct4cl);
-		answer4cl.setNumberOfAnswers(1);
+		answer4cl.setNumberOfAnswers(1.0);
 		answer4cl.setDeleted(false);
 		
 		Answer answer5cl = new Answer();
@@ -690,7 +690,7 @@ public class Seeder implements CommandLineRunner {
 		correct5cl.add("23");
 		correct4cl.add("twenty");
 		answer5cl.setCorrect(correct5cl);
-		answer5cl.setNumberOfAnswers(1);
+		answer5cl.setNumberOfAnswers(1.0);
 		answer5cl.setDeleted(false);
 		
 		Answer answer6cl = new Answer();
@@ -699,7 +699,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct6cl = new ArrayList<>();
 		correct6cl.add("avalon hill");
 		answer6cl.setCorrect(correct6cl);
-		answer6cl.setNumberOfAnswers(1);
+		answer6cl.setNumberOfAnswers(1.0);
 		answer6cl.setDeleted(false);
 		
 		Answer answer7cl = new Answer();
@@ -708,7 +708,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct7cl = new ArrayList<>();
 		correct7cl.add("umbrella");
 		answer7cl.setCorrect(correct7cl);
-		answer7cl.setNumberOfAnswers(1);
+		answer7cl.setNumberOfAnswers(1.0);
 		answer7cl.setDeleted(false);
 		
 		Answer answer8cl = new Answer();
@@ -717,7 +717,7 @@ public class Seeder implements CommandLineRunner {
 		List<String> correct8cl = new ArrayList<>();
 		correct8cl.add("screen gem");
 		answer8cl.setCorrect(correct8cl);
-		answer8cl.setNumberOfAnswers(1);
+		answer8cl.setNumberOfAnswers(1.0);
 		answer8cl.setDeleted(false);
 		
 		Answer hamiltonAnswer = new Answer();
@@ -725,7 +725,7 @@ public class Seeder implements CommandLineRunner {
 		hamiltonAnswer.setQuestion(hamiltonQuestion);
 		List<String> hamiltonCorrect = new ArrayList<>(Arrays.asList("hamilton", "burr", "berr", "washington", "angelica", "angelika", "eliza", "peggy", "george", "maria", "reynolds", "madison", "jefferson", "laurens", "philip", "phillip", "eacker", "eaker", "eecker", "eeker", "seabury", "seaberry", "seebury", "seeberry", "charles lee", "lafayet", "mulligan", "muligan"));
 		hamiltonAnswer.setDeleted(false);
-		hamiltonAnswer.setNumberOfAnswers(10);
+		hamiltonAnswer.setNumberOfAnswers(10.0);
 		
 		Answer answer1gh = new Answer();
 		answer1gh.setAvailablePoints(10.0);
@@ -735,35 +735,35 @@ public class Seeder implements CommandLineRunner {
 		correctYear.add("13");
 		correctYear.add("thirteen");
 		answer1gh.setCorrect(correctYear);
-		answer1gh.setNumberOfAnswers(1);
+		answer1gh.setNumberOfAnswers(1.0);
 		answer1gh.setDeleted(false);
 		
 		Answer answer2gh = new Answer();
 		answer2gh.setAvailablePoints(8.0);
 		answer2gh.setQuestion(question2gh);
 		answer2gh.setCorrect(correctYear);
-		answer2gh.setNumberOfAnswers(1);
+		answer2gh.setNumberOfAnswers(1.0);
 		answer2gh.setDeleted(false);
 		
 		Answer answer3gh = new Answer();
 		answer3gh.setAvailablePoints(6.0);
 		answer3gh.setQuestion(question3gh);
 		answer3gh.setCorrect(correctYear);
-		answer3gh.setNumberOfAnswers(1);
+		answer3gh.setNumberOfAnswers(1.0);
 		answer3gh.setDeleted(false);
 		
 		Answer answer4gh = new Answer();
 		answer4gh.setAvailablePoints(4.0);
 		answer4gh.setQuestion(question4gh);
 		answer4gh.setCorrect(correctYear);
-		answer4gh.setNumberOfAnswers(1);
+		answer4gh.setNumberOfAnswers(1.0);
 		answer4gh.setDeleted(false);
 		
 		Answer answer5gh = new Answer();
 		answer5gh.setAvailablePoints(2.0);
 		answer5gh.setQuestion(question5gh);
 		answer5gh.setCorrect(correctYear);
-		answer5gh.setNumberOfAnswers(1);
+		answer5gh.setNumberOfAnswers(1.0);
 		answer5gh.setDeleted(false);
 		
 		answerRepository.saveAll(Arrays.asList(new Answer[] { answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer1bg, answer2bg, answer3bg, answer4bg, answer5bg, answer1jm, answer2jm, answer3jm, answer4jm, answer5jm, answer6jm, answer7jm, answer8jm, answer1cl, answer2cl, answer3cl, answer4cl, answer5cl, answer6cl, answer7cl, answer8cl, hamiltonAnswer, answer1gh, answer2gh, answer3gh, answer4gh, answer5gh } ));

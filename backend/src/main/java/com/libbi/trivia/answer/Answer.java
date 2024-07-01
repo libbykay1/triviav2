@@ -39,7 +39,7 @@ public class Answer {
 	
 	private List<String> choices;
 	
-	private Integer numberOfAnswers;
+	private Double numberOfAnswers;
 	
 	private boolean deleted;
 	
