@@ -63,16 +63,19 @@ public class SubmissionServiceImpl implements SubmissionService{
 	    Map<Integer, Map<Double, List<String>>> correctAnswers = new HashMap<>();
 
 	    int questionIndex = 0;
+	    int totalAnswers = 0;
 	    for (Question question : round.getQuestions()) {
 	        Answer answer = question.getAnswer();
 	        Map<Double, List<String>> answerMap = new HashMap<>();
 	        for (int i = 0; i < answer.getNumberOfAnswers(); i++) {
 	            answerMap.put(answer.getAvailablePoints() / answer.getNumberOfAnswers(), answer.getCorrect());
+	            totalAnswers += 1;
 	        }
 	        correctAnswers.put(questionIndex++, answerMap);
 	    }
 
 	    questionIndex = 0;
+	    int correctCount = 0;
 	    for (Map.Entry<Integer, Map<Double, List<String>>> entry : correctAnswers.entrySet()) {
 	        Map<Double, List<String>> answerMap = entry.getValue();
 	        for (Map.Entry<Double, List<String>> answerEntry : answerMap.entrySet()) {
@@ -81,10 +84,19 @@ public class SubmissionServiceImpl implements SubmissionService{
 	            String submittedAnswer = submittedAnswers.get(questionIndex);
 	            if (verifyAnswer(submittedAnswer, acceptableAnswers)) {
 	                points += pointsPerAnswer;
+	                correctCount += 1;
 	            }
 	        }
 	        questionIndex++;
 	    }
+	    
+	    if (submission.getDoubleOrNothing()) {
+			if (correctCount == totalAnswers) {
+				points *= 2;
+			} else {
+				points = 0.0;
+			}
+		}
 
 	    submission.setPoints(points);
 	    return submissionMapper.entityToDto(submissionRepository.saveAndFlush(submission));
